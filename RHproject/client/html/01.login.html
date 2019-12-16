@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="../css/01login.css">
+    <script src="../js/captcha.js"></script>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/01login.js"></script>
+
+
+</head>
+
+<body>
+    <div class="box">
+
+        <div class="t-box">
+            <img src="https://s.banggo.com/pub7/images/mbshop/newImg/mbshop_new_logo2.png" alt="">
+        </div>
+        <div class="c-box">
+            <div class="l-box"><img
+                    src="https://passport.banggo.com/CASServer/themes/banggo/images/banggo/login_banner.jpg" alt="">
+            </div>
+            <div class="r-box">
+                <ul class="seltab">
+                    <li class="li1 color"><a href="">账户登录</a></li>
+                    <li><a href="">手机登录</a></li>
+                    <li><a href="">卡登录</a></li>
+                </ul>
+                <div class="namebox">
+                    <div class="name nameblock">
+                        <div class="form-item username">
+                            <span class="label">用户名:</span>
+                            <div class="content">
+                                <input type="text" placeholder="请输入您的用户名或邮箱地址" id="username-ID">
+                                <span class="form-group__message"></span>
+
+                            </div>
+                        </div>
+                        <div class="form-item password">
+                            <span class="label">登录密码:</span>
+                            <div class="content">
+                                <input type="text" placeholder="请输入密码" id="password-ID">
+                                <span class="form-group__message"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="name ">
+                        <div class="form-item username">
+                            <span class="label">手机号:</span>
+                            <div class="content">
+                                <input type="text" placeholder="请输入您的手机号" id="usernameID">
+                                <span class="form-group__message"></span>
+                            </div>
+                        </div>
+                        <div class="form-item password">
+                            <span class="label">登录密码:</span>
+                            <div class="content">
+                                <input type="text" placeholder="请输入密码" id="usernameID">
+                                <span class="form-group__message"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="name">
+                        <div class="form-item username">
+                            <span class="label">卡号:</span>
+                            <div class="content">
+                                <input type="text" placeholder="请输入您的卡号" id="usernameID">
+                                <span class="form-group__message"></span>
+                            </div>
+                        </div>
+                        <div class="form-item password">
+                            <span class="label">卡密码:</span>
+                            <div class="content">
+                                <input type="text" placeholder="请输入密码" id="usernameID">
+                                <span class="form-group__message"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-item image-code"><span class="label">验证码:</span>
+                    <div class="content">
+                        <input type="text" maxlength="6" placeholder="请输入验证码" id="imageCode">
+                        <div class="image-code-box">
+                            <canvas width="120" height="30" id="captcha"></canvas>
+                        </div>
+                        <span class="form-group__message ospan"></span>
+                    </div>
+                </div>
+
+                <div class="form-item agree">
+                    <div class="agr1">
+                        <input name="checkbox1" id="protocol" type="checkbox" class="checkbox1"> <label for="protocol"
+                            class="n1">记住用户名</label>
+                    </div>
+                    <div>
+                        <input name="protocol" id="protocol" type="checkbox" class="checkbox1">
+                        <label for="protocol" class="n1">自动登录</label>
+                    </div>
+
+
+                </div>
+                <div class="form-item login">
+                    <span class="label"></span>
+                    <button class="button register-btn" id="registerBtn">
+                        <a href="">登录</a></button>
+                    <span><a href="https://passport.banggo.com/CASServer/custom/showgetPwd.do?service=http://bgact.banggo.com/login?r_url=http://www.banggo.com/"
+                            class="a1">找回密码？</a></span>
+                </div>
+
+                <div class="registered">
+                    <span>还不是邦购网用户？马上加入吧~~~</span>
+                    <a href="http://127.0.0.1/code/RHproject/client/html/02.registered.html" class="login">免费注册>></a>
+                </div>
+                <div class=" img1">
+                    <img src="../img/01.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>美特斯邦威集团网站：<a href=""> 美特斯邦威 | ME&CITY | CH'IN祺 | 邦购网</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

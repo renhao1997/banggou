@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <script>
+
+        var item = document.getElementsByClassName("mbshop_listPdBox")[0];
+        var olis = item.getElementsByClassName("mbshop_listPdCon");
+        var data = [];
+        var data1 = [];
+        for (var i = 0; i < olis.length; i++) {
+
+            var oli = olis[i];
+            var obj = {};
+            obj.src = oli.getElementsByTagName("img")[0].src;
+            var shop1 = oli.getElementsByClassName('mbshop_listPdText')[0];
+            obj.shop = shop1.getElementsByTagName('a')[0].innerText;
+            obj.tlt = oli.getElementsByClassName('mbshop_listPdText')[1].innerText;
+
+            var pro = oli.getElementsByClassName("mbshop_listPdText")[2];
+            obj.pro = pro.getElementsByTagName('b')[0].innerText;
+
+            var imgs = document.getElementsByClassName('mbshop_listPdColor')[i];
+            var imga = imgs.getElementsByTagName("a");
+
+            // obj.src2 = imga.getElementsByTagName("img")[0].src;
+
+            for (var j = 0; j < imga.length; j++) {
+                data3 = []
+                var obj2 = {}
+                obj2.src = imga[j].getElementsByTagName("img")[0].src;
+                data3.push(obj2)
+            }
+            data1.push(obj, data3);
+            data.push(data1, data3)
+        }
+
+    </script>
+</body>
+
+</html>
