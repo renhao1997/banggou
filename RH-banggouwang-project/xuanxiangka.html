@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../guomei/jquery-3.4.1.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 1220px;
+            height: 600px;
+            display: flex;
+            margin-left: 100px;
+            margin-top: 100px;
+
+
+        }
+
+        ul {
+            background: skyblue;
+            height: 602px;
+            width: 220px;
+        }
+
+        ul li {
+            height: 30px;
+            /* background: slategray; */
+            list-style: none;
+            width: 220px;
+            /* background: seagreen; */
+            margin-top: 5px;
+            line-height: 30px;
+        }
+
+        .b-box .boxB .a1 {
+            /* display: block; */
+            color: seagreen;
+        }
+
+        li a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: #ffffff;
+
+        }
+
+
+
+
+        .c-box {
+            display: none;
+            height: 600px;
+            width: 1000px;
+            background: #cccccc;
+            border: 1px solid #000;
+            border-left: none;
+
+        }
+
+        .x-box {
+            display: block;
+        }
+
+        .boxB {
+            display: flex;
+
+        }
+
+        .boxC p {
+            height: 40px;
+            /* background: slategray; */
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        .boxD p {
+            height: 40px;
+        }
+
+        .boxD .a1 {
+
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        .boxC {
+            width: 120px;
+            /* background: seashell; */
+            margin-left: 20px;
+
+        }
+
+        .boxA a {
+            margin-top: 30px;
+            text-align: center;
+            color: #ffffff;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            background: red;
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="../guomei/data.js"></script>
+    <script src="../guomei/datas.js"></script>
+
+    <script>
+
+        class Manager {
+
+            constructor(data, datas) {
+                this.data = data;
+                this.datas = datas;
+                console.log(datas);
+                this.index = null;
+
+            }
+
+
+            inut() {
+                this.renderUI();
+                this.Event();
+            }
+
+            //生成标签
+            renderUI() {
+
+                //创建外面的大盒子
+                $("body").append($('<div class="box"></div>)'));
+
+                let box = $(".box").get(0);
+
+                //创建ul标签
+                $(".box").append($("<ul></ul>"));
+                let oUl = $("ul").get(0);
+
+                //外面循环生成li标签
+                let str = this.data.map(function (ele, index) {
+                    // console.log(ele);
+
+                    let str1 = ele.map(function (eles) {
+                        // console.log(eles);
+
+                        return `<a href="">${eles.innerText}</a>`
+
+                    }).join("")
+                    console.log(str1);
+
+                    // str.innerHTML = str1;
+                    // console.log(str1);
+
+                    return `<li>${str1}</li>`
+                }).join("")
+                console.log(str);
+
+                oUl.innerHTML = str;
+
+                //创建右边的的大盒子
+
+                $('.box').append($("<div class='b-box'></div>"))
+                let minBOX = $(".b-box").get(0);
+
+
+                //生成右边15个小盒子
+                let str2 = this.datas.map(function (ele, index) {
+
+                    //生成右边上面的文字
+                    let str3 = ele.redword.map(function (ele1) {
+                        return `<a href="">${ele1}</a>`
+                    }).join("")
+
+
+                    //生成左边边的文字
+                    let str4 = ele.goodsTitle.map(function (ele2) {
+
+                        return `<p>${ele2.listTitle}</p>`
+                    }).join("")
+                    // console.log(str4);
+
+                    //生成右边的文字
+
+
+                    let str5 = ele.goodsTitle.map(function (ele2) {
+
+
+                        var str6 = ele2.link.map(function (ele3) {
+
+                            return `<a href="" class="a1">${ele3}</a>`
+
+                        }).join("")
+
+                        return `<p>${str6}</>`
+                    }).join("")
+
+
+                    // console.log(str5);
+
+
+
+
+                    return `<div class='c-box'>
+                        <div class='boxA'>${str3}</div>
+                        <div class='boxB'>  
+                             <div class='boxC'>${str4}</div>
+                             <div class='boxD'>${str5}</div>
+                             </div>
+
+                        </div>`
+                }).join("")
+
+                minBOX.innerHTML = str2;
+
+            }
+
+            Event() {
+
+
+
+                //划入li变色
+                $("ul").on("mouseenter", "li", function () {
+                    // console.log($(this).index());
+
+                    //划入使右边盒子显示相应内容
+                    $(".b-box").children().eq($(this).index()).addClass("x-box").siblings().removeClass("x-box");
+
+                    $(this).css("background", "#cccccc");
+
+                    $(this).children("a").css("color", "#000")
+                });
+
+                //划入里面的字变色
+                $("li").on("mouseenter", "a", function () {
+
+
+                    $(this).css("color", "red");
+                });
+
+                //划出恢复原来的样式
+                $("ul").on("mouseleave", "li", function () {
+
+                    //划出隐藏右边相应的盒子
+                    // $(".b-box").children().eq($(this).index()).removeClass("x-box");
+
+                    $(this).css("background", "skyblue");
+                    $(this).children("a").css("color", "#ffffff")
+                });
+
+                //划出恢复原来的字体颜色
+                $("li").on("mouseleave", "a", function () {
+
+                    $(this).css("color", "#000");
+
+                });
+
+
+                $(".box").mouseleave(function () {
+
+                    //划出隐藏右边相应的盒子
+                    $(".b-box").children().removeClass("x-box");
+
+
+                });
+
+            }
+
+        }
+
+        let manager = new Manager(data, datas);
+        manager.inut();
+
+    </script>
+</body>
+
+</html>

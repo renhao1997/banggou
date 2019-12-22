@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.top-box{
+    border-bottom: 1px solid #cccccc;
+
+}
+.cont-box{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 32px;
+    line-height: 32px;
+    /* background: sandybrown; */
+}
+.top-ul{
+    display: flex;
+}
+
+.t-l-box p{
+    font-size: 12px;
+    color: #999;
+}
+
+.top-ul li{
+    list-style: none;
+    /* background: salmon; */
+    margin-left: 25px;
+}
+
+.top-ul a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #999;
+}
+
+
+/* ----------------------头部搜索栏开始---------------------- */
+.top-boxB{
+    width: 100%;
+}
+.mid-box{
+   width: 750px;
+}
+.cont-boxB{
+    margin: auto;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+.input_textbox{
+    line-height: 77px;
+
+}
+#input_textboxA{
+    line-height: 32px;
+    height: 32px;
+    width: 300px;
+    border: 1px solid#EF4343;
+    outline: none;
+    font-size: 12px;
+    
+}
+#input_textboxB{
+    line-height: 34px;
+    height: 34px;
+    width: 80px;
+    border: none;
+    margin-left: -5px;
+    background:#EF4343;
+    outline: none;
+    color: #ffffff;
+    font-size: 13px;
+}
+.mid-box a{
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 20px;
+    color: #999;
+}
+.right-box{
+    width: 150px;
+    overflow: hidden;
+    display: flex;
+}
+.as1{
+    margin-top: 20px;
+}
+.as2{
+    margin-top: 25px;
+}
+.right-box a{
+    text-decoration: none;
+    margin-top: 20px;
+    /* margin-left: 5px; */
+    margin-left: 5px;
+    color: #000000;
+}
+.right-box b{
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: red;
+}
+/* ————————————————————————————列表栏开始—————————————————— */
+
+
+.listbox{
+    width: 1200px;
+    margin: auto;
+    /* display: flex; */
+    justify-content: space-between;
+    height: 40px;
+    /* margin-bottom: 500px; */
+    position: relative;
+}
+.listulA{
+    width: 500px;
+    display: flex;
+    margin-top: 5px;
+    width: 450px;
+    float: left;
+}
+.listulC{
+    float: right;
+}
+.listulB{
+    float: left;
+}
+.listulA li{
+    width: 64px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+   
+}
+.listulA li a{
+    color: #000000;
+    font-size: 14px;
+}
+.listulB{
+    /* background: seagreen; */
+    display: flex;
+    /* position: absolute; */
+    /* height: 400px;
+    width: 400px; */
+    /* background: seagreen; */
+}
+.listdiv{
+    display: flex;
+    background: #ffffff;
+    margin-right: 20px;
+    display: none;
+    border: 1px solid #cccccc;
+}
+.block li{
+    /* height: 200px;
+    width: 200px; */
+    margin-right: 20px;
+    /* background: gold; */
+    margin-left:20px;
+}
+.block li p{
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.block{
+display: block;
+display: flex;
+position: absolute;
+/* height: 350px;
+width: 350px; */
+left: 70px;
+top: 45px;
+/* background: sienna; */
+}
+.listulB .sb{
+    margin-right: 20px;
+}
+.listbox .rightbox ul{
+    display: flex;
+}
+.listbox .rightbox li{
+    margin-left: 30px;
+}
+
+/* ---------轮播图开始--------------------- */
+
+
+.listimg .maximg {
+    /* position: relative; */
+    /* display: flex; */
+    width: 1423px;
+    height: 445px;
+    z-index:-1;
+    overflow: hidden;
+    position: relative;
+}
+.oulimg{
+    width: 100000px;
+    display: flex;
+    position: absolute;
+    height: 100%;
+}
+.listimg .maximg img{
+  width: 1423px;
+  height: 100%;
+  z-index:-1;
+}
+.listimg .minimg{
+    width: 1200px;
+    /* background: seagreen; */
+    margin: auto;
+    height: 200px;
+}
+
+.listimg .minimg li{
+    width: 219px!important;
+    height: 110px;
+    float: left;
+    margin: 20px 0;
+    padding: 0 10px;
+    border-right: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.minimgB{
+    border: 1px solid seagreen;
+}
+.imgp1{
+    display: block;
+    background: indigo;
+    margin: auto;
+    /* display: none; */
+}
+.imgblock{
+    display: block;
+    height: 110px;
+    border-bottom: 4px solid red;
+    padding: 100px;
+   
+}
+/* ——————————————————内容区域开始—————————————————————————————— */
+
+.middle-box{
+    width: 100%;
+    background: #f7f7f7;
+
+}
+.plate-box{
+    width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.plate1 .plateimg{
+    width: 400px;
+    height: 240px;
+    float: left;
+}
+
+.plate2 .palteimg{
+    width: 300px;
+    height: 250px;
+    float: left;
+    margin-bottom: 10px;
+}
+.plate1 li{
+    background: #fff;
+    width: 230px;
+    height: 325px;
+    margin-bottom: 20px;
+}
+.plate1 li img{
+    width: 230px;
+    height: 230px;
+}
+.plate1 .plate3ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.plate1 li p{
+    color: #999;
+    margin-top: 10px;
+}
+.plate1 li a{
+    display: block;
+    width: 196px;
+    overflow: hidden;
+    height: 20px;
+    color: #000000;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.plate1 li h6{
+    color: #EF4343;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.topboys{
+    display: flex;
+}
+.contboys a{
+    display: inline-block;
+    height: 325px;
+    margin-top: 15px;
+}
+.contboys{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.boysul {
+    display: flex;
+}  
+.contboys li{
+    background: #fff;
+    width: 230px;
+    height: 325px;
+    margin-top: 15px;
+}
+.contboys li img{
+    width: 230px;
+    height: 230px;
+}
+.contboys li p{
+    color: #999;
+    margin-top: 10px;
+}
+.contboys li a{
+    display: block;
+    width: 196px;
+    overflow: hidden;
+    height: 20px;
+    color: #000000;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.contboys li h6{
+    color: #EF4343;
+    margin-top: 5px;
+    font-size: 14px;
+}
+/* ————————————————————————————底部开始—————————————————— */
+.bootomimg1{
+    width: 1200px;
+    margin: auto;
+    margin-top: 60px;
+}
+.bootomimg1 img{
+    width: 100%;
+    height: 245px;;
+}
+
+.bootomimg2 img{
+    width: 1400px;
+     margin-left: 20px;
+     margin-top: 30px;
+}
+/* .bootomimg2 img{
+
+} */

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var data = []
+        // var ouls = document.getElementsByClassName('IN_plate')[0]
+        // var olis = ouls.getElementsByClassName("plate_box")[0];
+        // var imgs = olis.getElementsByClassName("link")
+        // //精选
+        // var data1 = []
+        // for (var i = 0; i < imgs.length; i++) {
+        //     var obj = {}
+        //     // console.log(imgs[0]);
+
+        //     obj.src = imgs[i].getElementsByTagName("img")[0].src
+        //     data1.push(obj)
+        // }
+
+        // var ouls = document.getElementsByClassName('IN_plate')[0]
+        // var olis2 = ouls.getElementsByClassName("plate_box")[1];
+        // var imgs2 = olis2.getElementsByClassName("link")
+        // //热门
+        // var data2 = []
+        // for (var j = 0; j < imgs2.length; j++) {
+        //     console.log(j);
+        //     var obj2 = {}
+        //     obj2.src2 = imgs2[j].getElementsByTagName("img")[0].src
+        //     data2.push(obj2)
+        // }
+        // //今日热卖图片
+        // var data3 = []
+        // var olis3 = ouls.getElementsByClassName("plate_box")[2];
+        // var imgs3 = olis3.getElementsByClassName("link")[0];
+        // var remai = imgs3.getElementsByTagName('img')[0].src;
+        // data3.push(remai)
+
+        // var remaioul = document.getElementsByClassName("plate_box_776")[0];
+        // var remailis = remaioul.getElementsByClassName("goods_box 1")
+
+        // var data4 = [];
+        // for (var k = 0; k < remailis.length; k++) {
+        //     var obj4 = {}
+
+        //     var remaili = remailis[k];
+        //     var remaiimgs = remaili.getElementsByTagName("div")[0];
+        //     obj4.src4 = remaiimgs.getElementsByTagName('img')[0].src;
+
+        //     var remaiimgs1 = remaili.getElementsByClassName("name")[0];
+        //     obj4.shop = remaiimgs1.getElementsByTagName("a")[0].innerText;
+        //     obj4.tlt = remaiimgs1.getElementsByTagName("span")[0].innerText;
+        //     var remaiimgs2 = remaili.getElementsByClassName("price")[0];
+        //     obj4.pri = remaiimgs2.getElementsByTagName("b")[0].innerText;
+
+        //     data4.push(obj4)
+        // }
+        // data.push(data1, data2, data3, data4)
+        var data7 = []
+        var data5 = []
+        var ouls = document.getElementsByClassName("plate_box")[3];
+        var olis = ouls.getElementsByClassName("plate_box_773")[0]
+        var imgs = olis.getElementsByClassName("link")
+        for (var i = 0; i < imgs.length; i++) {
+            var obj5 = {}
+            obj5.src = imgs[i].getElementsByTagName("img")[0].src;
+            data5.push(obj5)
+        }
+        var data6 = []
+        var box = ouls.getElementsByClassName('goods_box')
+        for (var k = 0; k < box.length; k++) {
+            var obj6 = {}
+
+            var mbox = box[k];
+            var mbox1 = mbox.getElementsByTagName("div")[0];
+            obj6.src6 = mbox1.getElementsByTagName('img')[0].src;
+
+            var mbox2 = mbox.getElementsByClassName("name")[0];
+            obj6.shop = mbox2.getElementsByTagName("a")[0].innerText;
+
+            obj6.tlt = mbox2.getElementsByTagName("span")[0].innerText;
+            var mbox3 = mbox.getElementsByClassName("price")[0];
+
+            var mbox4 = mbox.getElementsByClassName("price")[0];
+            obj6.pri = mbox4.getElementsByTagName("b")[0].innerText;
+
+
+            data6.push(obj6)
+        }
+        data7.push(data5, data6)
+    </script>
+</body>
+
+</html>

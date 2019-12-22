@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="referrer" content="no-referrer" />
+    <title>购物车</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../css/04homepage.css">
+    <link rel="stylesheet" href="../css/base_px.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/carts.css">
+    <script src="../js/06ShoppingCart.js"></script>
+</head>
+
+<body>
+    <div class="top-box">
+        <div class="cont-box">
+            <div class="t-l-box">
+                <p>欢迎来到邦购网，全场实付满99元包邮，本网站多为断码限量商品，支持14天无理由退换货，不支持退差价，感谢理解。</p>
+            </div>
+            <div class="t-r-box">
+                <ul class="top-ul">
+                    <li><a class="log" href="http://127.0.0.1/code/RHproject/client/html/01.login.html">登录</a></li>
+                    <li><a class="status" href="#">注册</a></li>
+                    <li><a href="">我的邦购</a></li>
+                    <li><a href="">会员中心</a></li>
+                    <li><a href="">下载APP</a></li>
+                    <li><a href="">微博</a></li>
+                    <li><a href="">微信</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="shopcar">
+        <div class="topcar">
+            <img src="../img/09.png" alt="">
+        </div>
+
+    </div>
+    <section class="cartMain">
+        <div class="cartMain_hd">
+            <ul class="order_lists cartTop">
+                <li class="list_chk">
+                    <input type="checkbox" id="all" class="whole_check">
+                    <label for="all"></label> 全选
+                </li>
+                <li class="list_con">商品信息</li>
+                <li class="list_price">单价</li>
+                <li class="list_amount">数量</li>
+                <li class="list_sum">金额</li>
+                <li class="list_op">操作</li>
+            </ul>
+        </div>
+
+        <div class="bar-wrapper">
+            <div class="bar-left">
+                <li class="list_chk">
+                    <input type="checkbox" id="all2" class="whole_check">
+                    <label for="all2"></label> 全选
+                </li>
+                <li class="list_delall">清空购物车</li>
+            </div>
+            <div class="bar-right">
+                <div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
+                <div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
+                <div class="goshop"><a href="./goodlist.html">继续购物</a></div>
+                <div class="calBtn"><a href="#">结算</a></div>
+            </div>
+        </div>
+    </section>
+    <section class="model_bg"></section>
+    <section class="my_model">
+        <p class="title">删除宝贝<span class="closeModel">X</span></p>
+        <p>您确认要删除该宝贝吗？</p>
+        <div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;"
+                class="dialog-close">关闭</a></div>
+    </section>
+</body>
+
+</html>
